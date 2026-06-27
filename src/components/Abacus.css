@@ -1,0 +1,195 @@
+.beads-button {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid #9C8259;
+  background: #C9A878;
+  opacity: 0.55;
+  cursor: pointer;
+  font-size: 0;
+  transition: transform 0.15s ease, background 0.15s ease, opacity 0.15s ease;
+}
+
+.beads-button.active {
+  background: #D88A2E;
+  border-color: #A35F1F;
+  opacity: 1;
+}
+
+/* //pseudo element, doesnt need a div */
+.beads-combo::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #D4B896;
+  transform: translateX(-50%);
+  z-index: -1;
+  border-radius: 2px;
+}
+
+.lower-beads{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:3px;
+}
+
+.upper-beads{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.lower-beads button.active{
+    /* when lower beads are clicked */
+    transform: translateY(-18px);
+}
+
+.upper-beads button.active{
+    transform: translateY(14px);
+}
+
+.beads-combo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+}
+
+.beads-value{
+  white-space: nowrap;
+  font-family: Arial, Helvetica, sans-serif;
+ 
+}
+
+.beads-total{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.place-label {
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 600;
+  color: #F0D9B5;
+  text-align: center;
+  margin: 0 0 0px;
+  font-family: 'Fredoka', sans-serif;
+}
+
+/* 
+   Tablets (≤1024px)
+ */
+@media (max-width: 1024px) {
+  .beads-combo {
+    gap: 30px;
+  }
+
+  .beads-button {
+    width: 34px;
+    height: 34px;
+  }
+
+  .lower-beads button.active {
+    transform: translateY(-12px);
+  }
+
+  .upper-beads button.active {
+    transform: translateY(12px);
+  }
+
+  .place-label {
+    font-size: 12px;
+  }
+
+  .beads-value,
+  .beads-total {
+    font-size: 15px;
+  }
+}
+
+
+/* 
+   Small Tablets (≤768px)
+*/
+@media (max-width: 768px) {
+  .beads-combo {
+    gap: 24px;
+  }
+
+  .beads-button {
+    width: 30px;
+    height: 30px;
+    border-width: 1.5px;
+  }
+
+  .beads-combo::before {
+    width: 3px;
+  }
+
+  .lower-beads {
+    gap: 2px;
+  }
+
+  .lower-beads button.active {
+    transform: translateY(-10px);
+  }
+
+  .upper-beads button.active {
+    transform: translateY(7px);
+  }
+
+  .place-label {
+    font-size: 11px;
+  }
+
+  .beads-value,
+  .beads-total {
+    font-size: 14px;
+  }
+}
+
+
+/*
+   Mobile (≤480px)
+*/
+@media (max-width: 480px) {
+  .beads-combo {
+    gap: 18px;
+  }
+
+  .beads-button {
+    width: 24px;
+    height: 24px;
+    border-width: 1px;
+  }
+
+  .beads-combo::before {
+    width: 2px;
+  }
+
+  .lower-beads {
+    gap: 2px;
+  }
+
+  .lower-beads button.active {
+    transform: translateY(-7px);
+  }
+
+  .upper-beads button.active {
+    transform: translateY(6px);
+  }
+
+  .place-label {
+    font-size: 10px;
+  }
+
+  .beads-value,
+  .beads-total {
+    font-size: 12px;
+  }
+}

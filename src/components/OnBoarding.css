@@ -1,0 +1,234 @@
+.onboarding-container {
+  height: 100vh;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.main-app-onboarding {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  background-color: #8C5A34;
+  background-image: repeating-linear-gradient(90deg, #8C5A34 0px, #936038 2px, #875836 4px, #8C5A34 6px);
+  padding: 20px 22px;
+  border: 12px solid #6B4226;
+  border-radius: 14px;
+  background-clip: padding-box;
+  box-shadow:
+    inset 0 0 0 4px #4A2E18,
+    inset 0 2px 6px rgba(0,0,0,0.3),
+    0 6px 0 #3A2010,
+    0 10px 16px rgba(0,0,0,0.25);
+  justify-content: center;
+}
+
+.soroban-divider-onboarding {
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  top: 87px;
+  height: 5px;
+  background: #4A2E18;
+  border-radius: 2px;
+}
+
+.step-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #6B4226;
+  font-family: 'Fredoka', sans-serif;
+  text-align: center;
+  max-width: 480px;
+  min-height: 60px;
+}
+
+.onboarding-button-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.onboarding-next-button {
+  background: linear-gradient(180deg, #E89B3C, #D88A2E);
+  color: #4A2E18;
+  border: none;
+  border-bottom: 4px solid #A35F1F;
+  border-radius: 12px;
+  padding: 11px 26px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'Fredoka', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(168, 95, 30, 0.4);
+}
+
+.onboarding-next-button:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px;
+}
+
+.onboarding-next-button:disabled {
+  background: #C9A878;
+  border-bottom-color: #9C8259;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.onboarding-skip-button {
+  background: #FFFDF8;
+  color: #6B4226;
+  border: 2px solid #C9A878;
+  border-radius: 12px;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Fredoka', sans-serif;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.onboarding-skip-button:hover {
+  background: #F0E4D2;
+}
+
+.onboarding-skip-button:active {
+  transform: translateY(2px);
+}
+
+/* =========================
+   Tablets (≤1024px)
+========================= */
+@media (max-width: 1024px) {
+
+  .onboarding-container{
+    padding:20px;
+    gap:18px;
+  }
+
+  .main-app-onboarding{
+    gap:16px;
+    padding:18px;
+    border-width:10px;
+  }
+
+  .soroban-divider-onboarding{
+    left:18px;
+    right:18px;
+    top:80px;
+  }
+
+  .step-text{
+    font-size:18px;
+    min-height:54px;
+  }
+
+  .onboarding-next-button,
+  .onboarding-skip-button{
+    padding:10px 22px;
+    font-size:14px;
+  }
+
+}
+
+
+/* =========================
+   Small Tablets (≤768px)
+========================= */
+@media (max-width:768px){
+
+  .onboarding-container{
+    /* justify-content:flex-start; */
+    padding:16px;
+    gap:16px;
+  }
+
+  .main-app-onboarding{
+    width:fit-content;
+    max-width:none;
+    overflow-x:auto;
+    gap:12px;
+    padding:14px;
+    border-width:8px;
+  }
+
+  .soroban-divider-onboarding{
+    left:14px;
+    right:14px;
+    top:65px;
+  }
+
+  .step-text{
+    font-size:17px;
+    min-height:auto;
+    max-width:100%;
+  }
+
+  .onboarding-button-row{
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  .onboarding-next-button,
+  .onboarding-skip-button{
+    font-size:13px;
+    padding:9px 18px;
+  }
+
+}
+
+
+/* =========================
+   Mobile (≤480px)
+========================= */
+@media (max-width:480px){
+
+  .onboarding-container{
+    padding:12px;
+    gap:14px;
+  }
+
+  .main-app-onboarding{
+    width:fit-content;
+    max-width:none;
+    overflow-x:auto;
+    gap:8px;
+    padding:10px;
+    border-width:6px;
+    border-radius:10px;
+  }
+
+  .soroban-divider-onboarding{
+    left:10px;
+    right:10px;
+    top:52px;
+    height:4px;
+  }
+
+  .step-text{
+    font-size:15px;
+    line-height:1.4;
+    max-width:100%;
+  }
+
+  .onboarding-button-row{
+    width:100%;
+    flex-direction:column;
+    align-items:stretch;
+    gap:10px;
+  }
+
+  .onboarding-next-button,
+  .onboarding-skip-button{
+    width:100%;
+    padding:10px;
+    font-size:13px;
+  }
+
+}

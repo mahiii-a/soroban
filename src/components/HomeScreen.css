@@ -1,0 +1,322 @@
+.home-container {
+  height: 100vh;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.mini-abacus-logo {
+  display: inline-flex;
+  gap: 6px;
+  background: #6B4226;
+  padding: 10px 14px;
+  border-radius: 12px;
+  box-shadow: 0 4px 0 #4A2E18;
+  margin-bottom: 16px;
+}
+
+.mini-bead {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #D88A2E;
+  border: 2px solid #A35F1F;
+}
+
+.mini-bead-offset {
+  background: #C9A878;
+  border-color: #9C8259;
+  margin-top: 18px;
+}
+
+.home-title {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: 'Fredoka', sans-serif;
+  color: #6B4226;
+  margin: 0;
+}
+
+.home-tagline {
+  font-size: 14px;
+  color: #8B5E34;
+  margin-top: 6px;
+  margin-bottom: 32px;
+}
+
+.level-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.level-card {
+  border-radius: 14px;
+  padding: 20px 14px;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.level-card:hover {
+  transform: translateY(-3px);
+}
+
+.level-unlocked {
+  background: #FFFDF8;
+  border: 2px solid #D88A2E;
+  box-shadow: 0 4px 0 #C9A878;
+}
+
+.level-locked {
+  background: #EFE3D0;
+  border: 2px solid #C9A878;
+  opacity: 0.6;
+  position: relative;
+  cursor: not-allowed;
+}
+
+.level-locked:hover {
+  transform: none;
+}
+
+.lock-icon {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 14px;
+}
+
+.level-emoji {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.level-name {
+  font-weight: 700;
+  font-family: 'Fredoka', sans-serif;
+  color: #6B4226;
+  font-size: 15px;
+}
+
+.level-locked .level-name {
+  color: #8C5A34;
+}
+
+.level-dots {
+  font-size: 11px;
+  color: #A35F1F;
+  margin-top: 4px;
+}
+
+.free-mode-card {
+  width: 100%;
+  background: transparent;
+  border: 2px dashed #C9A878;
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+  color: #8B5E34;
+  font-weight: 600;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.free-mode-card:hover {
+  background: #FAF3E8;
+}
+
+/* =========================
+   Tablets (≤1024px)
+========================= */
+@media (max-width: 1024px) {
+
+  .home-container{
+    padding:32px 24px;
+  }
+
+  .home-title{
+    font-size:30px;
+  }
+
+  .home-tagline{
+    font-size:14px;
+    margin-bottom:28px;
+  }
+
+  .level-grid{
+    gap:14px;
+  }
+
+  .level-card{
+    padding:18px 12px;
+  }
+
+  .level-emoji{
+    font-size:26px;
+  }
+
+  .level-name{
+    font-size:14px;
+  }
+
+}
+
+
+/* =========================
+   Small Tablets (≤768px)
+========================= */
+@media (max-width:768px){
+
+  .home-container{
+    padding:24px 18px;
+  }
+
+  .mini-abacus-logo{
+    gap:5px;
+    padding:8px 12px;
+  }
+
+  .mini-bead{
+    width:12px;
+    height:12px;
+  }
+
+  .mini-bead-offset{
+    margin-top:16px;
+  }
+
+  .home-title{
+    font-size:26px;
+  }
+
+  .home-tagline{
+    font-size:13px;
+    margin-bottom:24px;
+  }
+
+  .level-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+  }
+
+  .level-card{
+    padding:16px 10px;
+  }
+
+  .level-emoji{
+    font-size:24px;
+  }
+
+  .level-name{
+    font-size:14px;
+  }
+
+  .free-mode-card{
+    padding:14px;
+    font-size:13px;
+  }
+
+}
+
+
+/* =========================
+   Mobile (≤480px)
+========================= */
+@media (max-width:480px){
+
+  .home-container{
+    padding:20px 14px;
+  }
+
+  .mini-abacus-logo{
+    padding:7px 10px;
+    gap:4px;
+  }
+
+  .mini-bead{
+    width:10px;
+    height:10px;
+    border-width:1px;
+  }
+
+  .mini-bead-offset{
+    margin-top:12px;
+  }
+
+  .home-title{
+    font-size:22px;
+  }
+
+  .home-tagline{
+    font-size:12px;
+    margin-bottom:20px;
+  }
+
+  .level-grid{
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+
+  .level-card{
+    padding:14px;
+  }
+
+  .level-emoji{
+    font-size:22px;
+  }
+
+  .level-name{
+    font-size:14px;
+  }
+
+  .level-dots{
+    font-size:10px;
+  }
+
+  .lock-icon{
+    font-size:12px;
+    top:6px;
+    right:8px;
+  }
+
+  .free-mode-card{
+    padding:12px;
+    font-size:12px;
+  }
+
+}
+
+.google-signin-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #FFFDF8;
+  color: #6B4226;
+  border: 2px solid #C9A878;
+  border-radius: 12px;
+  padding: 11px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Fredoka', sans-serif;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+  margin-bottom: 20px;
+}
+
+.google-signin-button:hover {
+  background: #F0E4D2;
+}
+
+.google-signin-button:active {
+  transform: translateY(2px);
+}
