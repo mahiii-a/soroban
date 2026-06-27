@@ -69,7 +69,9 @@ function GameScreen({setUnlockedLevels, lessonProgress, setLessonProgress}){
 
     //progress bar
     //deriving progress as a percentage
-    const progress=(currentChallenge/lessons[lessonProgress[level]].challenges.length) *100
+    const progress = lessonProgress[level] < lessons.length 
+        ? (currentChallenge / lessons[lessonProgress[level]].challenges.length) * 100 
+        : 0
 
     const [onesValue, setOnesValue] = useState(0);
     const [tensValue, setTensValue] = useState(0);
